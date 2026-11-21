@@ -23,48 +23,7 @@ if ($conn->connect_error) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .hero-about {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 0;
-        }
-        
-        .team-member {
-            transition: transform 0.3s;
-        }
-        
-        .team-member:hover {
-            transform: translateY(-10px);
-        }
-        
-        .team-img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border: 5px solid #ff6b6b;
-        }
-        
-        .value-card {
-            border-left: 5px solid #ff6b6b;
-            padding-left: 20px;
-            transition: all 0.3s;
-        }
-        
-        .value-card:hover {
-            background-color: #f8f9fa;
-            transform: translateX(10px);
-        }
-        
-        .philosophy-icon {
-            font-size: 3rem;
-            color: #ff6b6b;
-            margin-bottom: 1rem;
-        }
-    </style>
+   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
      <!-- Navigation -->

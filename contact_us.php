@@ -66,53 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['contact_submit'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .hero-contact {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 0;
-        }
-        
-        .contact-card {
-            border: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .contact-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .contact-icon {
-            font-size: 2.5rem;
-            color: #ff6b6b;
-            margin-bottom: 1rem;
-        }
-        
-        .form-control:focus {
-            border-color: #ff6b6b;
-            box-shadow: 0 0 0 0.25rem rgba(255, 107, 107, 0.25);
-        }
-        
-        .map-container {
-            height: 300px;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        
-        .faq-item {
-            border-left: 3px solid #ff6b6b;
-            padding-left: 15px;
-            margin-bottom: 20px;
-        }
-        
-        .myanmar-flag {
-            color: #fecb00;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/contact_us.css">
 </head>
 <body>
  <!-- Navigation -->
@@ -485,23 +439,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['contact_submit'])) {
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <script>
-        // Form validation enhancement
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.querySelector('form');
-            if (form) {
-                form.addEventListener('submit', function(e) {
-                    const privacyCheck = document.getElementById('privacyCheck');
-                    if (!privacyCheck.checked) {
-                        e.preventDefault();
-                        alert('Please agree to the Privacy Policy before submitting.');
-                        privacyCheck.focus();
-                    }
-                });
-            }
-        });
-    </script>
+    <script src="assets/js/contact_us.js"></script>
 </body>
 </html>
 

@@ -87,72 +87,7 @@ $difficulties = $difficulties_result->fetch_all(MYSQLI_ASSOC);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .hero-recipes {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 0;
-        }
-        
-        .recipe-card {
-            border: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            height: 100%;
-        }
-        
-        .recipe-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .recipe-img {
-            height: 200px;
-            object-fit: cover;
-            width: 100%;
-        }
-        
-        .badge-cuisine {
-            background-color: #dc3545;
-            color: white;
-        }
-        
-        .badge-diet {
-            background-color: #28a745;
-            color: white;
-        }
-        
-        .badge-difficulty {
-            background-color: #ffc107;
-            color: #212529;
-        }
-        
-        .filter-card {
-            background-color: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 10px;
-            padding: 20px;
-        }
-        
-        .recipe-meta {
-            font-size: 0.9rem;
-            color: #6c757d;
-        }
-        
-        .empty-state {
-            padding: 60px 20px;
-            text-align: center;
-            color: #6c757d;
-        }
-        
-        .empty-state i {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            color: #dee2e6;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/recipe_collection.css">
 </head>
 <body>
      <!-- Navigation -->
@@ -611,19 +546,7 @@ $difficulties = $difficulties_result->fetch_all(MYSQLI_ASSOC);
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <script>
-        // Auto-submit form when dropdown changes
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterSelects = document.querySelectorAll('select[name="cuisine"], select[name="diet"], select[name="difficulty"]');
-            
-            filterSelects.forEach(select => {
-                select.addEventListener('change', function() {
-                    this.form.submit();
-                });
-            });
-        });
-    </script>
+    <script src="assets/js/recipe_collection.js"></script>
 </body>
 </html>
 

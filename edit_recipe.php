@@ -128,78 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && $recipe_id > 0) {
     <title>Edit Recipe - FoodFusion Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .recipe-card {
-            max-width: 800px;
-            margin: 30px auto;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
-        .card-header {
-            background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
-            padding: 20px;
-        }
-        .form-label {
-            font-weight: 600;
-            color: #495057;
-        }
-        .required::after {
-            content: " *";
-            color: #dc3545;
-        }
-        .recipe-preview {
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
-            padding: 15px;
-            margin-top: 10px;
-            background: #f8f9fa;
-        }
-        .current-image {
-            max-width: 200px;
-            max-height: 150px;
-            border-radius: 8px;
-            border: 2px solid #dee2e6;
-        }
-        .no-image {
-            color: #6c757d;
-            font-style: italic;
-        }
-        .btn-back {
-            background: #6c757d;
-            border-color: #6c757d;
-        }
-        .btn-back:hover {
-            background: #5a6268;
-            border-color: #545b62;
-        }
-        .btn-update {
-            background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
-            border: none;
-            padding: 10px 30px;
-            font-weight: 600;
-        }
-        .btn-update:hover {
-            background: linear-gradient(135deg, #218838 0%, #1c7430 100%);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
-        }
-        .alert {
-            border-radius: 8px;
-        }
-        .form-control, .form-select {
-            border-radius: 8px;
-            border: 1px solid #ced4da;
-            padding: 10px 15px;
-        }
-        .form-control:focus, .form-select:focus {
-            border-color: #28a745;
-            box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/edit_recipe.css">
 </head>
 <body>
     <nav class="navbar navbar-dark bg-danger">
@@ -426,5 +355,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && $recipe_id > 0) {
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Auto-dv
+    <script src="assets/js/edit_recipe.js"></script>
+</body>
+</html>

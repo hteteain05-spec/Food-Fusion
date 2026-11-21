@@ -106,87 +106,9 @@ if (!isset($_COOKIE['cookie_consent'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 0;
-        }
-        
-        .feature-icon {
-            font-size: 2rem;
-            color: #ff6b6b;
-            margin-bottom: 1rem;
-        }
-        
-        .card {
-            transition: transform 0.3s;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .recipe-card img {
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        footer {
-            background-color: #333;
-            color: white;
-        }
-        
-        /* Dropdown menu styling */
-        .dropdown:hover .dropdown-menu {
-            display: block;
-            margin-top: 0;
-        }
-        
-        .dropdown-menu {
-            border: none;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        
-        .dropdown-item:hover {
-            background-color: #ff6b6b;
-            color: white;
-        }
-        
-        /* Cookie Consent Banner */
-        .cookie-consent {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0,0,0,0.9);
-            color: white;
-            padding: 15px;
-            z-index: 9999;
-        }
-        
-        /* Social Media Icons */
-        .social-icons a {
-            color: white;
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-        
-        .social-icons a:hover {
-            color: #ff6b6b;
-        }
-        
-        /* User dropdown */
-        .user-dropdown .dropdown-toggle::after {
-            margin-left: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
-<body>
+<body data-modal-action="<?php echo (isset($_POST['register']) && $message && $message_type == 'danger') ? 'register' : ((isset($_POST['login']) && $message && $message_type == 'danger') ? 'login' : ''); ?>" data-success-message="<?php echo htmlspecialchars(($message && $message_type == 'success') ? $message : '', ENT_QUOTES, 'UTF-8'); ?>">
     <!-- Cookie Consent Banner -->
     <?php if (!isset($_COOKIE['cookie_consent'])): ?>
     <div class="cookie-consent">
@@ -609,48 +531,7 @@ if (!isset($_COOKIE['cookie_consent'])) {
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <script>
-        // Cookie consent functions
-        function hideCookieBanner() {
-            document.querySelector('.cookie-consent').style.display = 'none';
-        }
-        
-        // Auto open modals based on conditions
-        <?php if ($message && $message_type == 'danger' && isset($_POST['register'])): ?>
-        window.onload = function() {
-            var registerModal = new bootstrap.Modal(document.getElementById('registerModal'));
-            registerModal.show();
-        }
-        <?php elseif ($message && $message_type == 'danger' && isset($_POST['login'])): ?>
-        window.onload = function() {
-            var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
-            loginModal.show();
-        }
-        <?php endif; ?>
-        
-        // Show success message
-        <?php if ($message && $message_type == 'success'): ?>
-        window.onload = function() {
-            alert('<?php echo $message; ?>');
-            // Close modal if open
-            var registerModal = bootstrap.Modal.getInstance(document.getElementById('registerModal'));
-            var loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
-            
-            if (registerModal) {
-                registerModal.hide();
-            }
-            if (loginModal) {
-                loginModal.hide();
-            }
-            
-            // Reload page to update navbar
-            setTimeout(function() {
-                window.location.reload();
-            }, 1000);
-        }
-        <?php endif; ?>
-    </script>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>
 
