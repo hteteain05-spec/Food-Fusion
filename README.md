@@ -26,7 +26,19 @@ Food Fusion is a PHP-based web application focused on recipes and culinary learn
 - **CSS Framework:** Bootstrap 5
 - **Icons:** Font Awesom
 
-## 🌐 Live Demo
 
-Not available yet.
+## 📸 Preview
+
+### Homepage
+<p align="center">
+  <img src="Project-ScreenShot/ss2.png" alt="Food Fusion Homepage" width="85%">
+</p>
+
+### Recipe Collection
+<p align="center">
+  <img src="Project-ScreenShot/ss1.png" alt="Food Fusion Recipe Collection" width="85%">
+</p>
+
+
+
 
